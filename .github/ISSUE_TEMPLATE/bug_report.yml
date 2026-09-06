@@ -1,0 +1,60 @@
+name: Bug report
+description: Report reproducible behavior using synthetic, non-sensitive data.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, phone numbers, precise GPS coordinates, webhook payloads, or other personal data. Use invented examples.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed and expected behavior.
+      placeholder: The page showed ...; I expected ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Safe reproduction steps
+      description: Use only synthetic data and do not trigger real messages or warnings.
+      placeholder: |
+        1. Open ...
+        2. Enter the invented kecamatan ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL, if relevant
+      description: Link only to the public official bulletin or dataset involved.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did this happen?
+      options:
+        - Public website
+        - Operator page
+        - WhatsApp webhook or reply
+        - Local development
+        - Documentation
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, personal data, precise locations, and real webhook content.
+          required: true
+        - label: I did not send a real public warning or subscriber broadcast while testing.
+          required: true
