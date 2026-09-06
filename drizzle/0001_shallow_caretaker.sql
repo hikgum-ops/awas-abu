@@ -1,0 +1,1 @@
+ALTER TABLE `aa_status` ADD `scope_basis` text DEFAULT 'operator_selected' NOT NULL;

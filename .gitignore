@@ -1,0 +1,22 @@
+node_modules/
+.next/
+.vinext/
+dist/
+.wrangler/
+.env
+.env.local
+.env.*.local
+coverage/
+*.tsbuildinfo
+*.log
+.sites-upload.tar.gz
+!.env.example
+
+# Loose Phase 0 source fragments retained locally for reference.
+/mnt/
+/areas.ts
+/fonnte.ts
+/reply.ts
+/route.ts
+/schema.sql
+/status.ts
